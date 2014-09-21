@@ -65,7 +65,6 @@ void read_config(std::ifstream& in, config *out) {
 			std::string firstWord;
 			try {
 				firstWord = str.substr(0,str.find(" "));
-				std::cout << "word: " << firstWord << std::endl;
 			}
 			catch(std::exception& e) {
 				firstWord = str.erase(str.find_first_of(" "),str.find_first_not_of(" "));
