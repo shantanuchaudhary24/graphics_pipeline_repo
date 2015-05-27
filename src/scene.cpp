@@ -148,7 +148,7 @@ void init(config *ptr){
 		}
 	}
 
-
+/* Tranformations controlled from here */
 //	normalized_transformation((d3*width)/d1,(d3*height)/d1,d1,d2,d3);
 //	perspective_transformation(d3);
 	perspective_projection(d3);

@@ -1,20 +1,60 @@
-#############################################################################################################################################################
-										README
-#############################################################################################################################################################
+################################################################################################
 
-This repository contains code for assignment 1 for CSL781: Computer Graphics Course under supervision of Prof. Prem Kalra at Indian Institute of Technology,
-Delhi.
+					     README
 
-#############################################################################################################################################################
+################################################################################################
+
+Code for OpenGL graphics pipeline implemented in C. This program simulates 3D viewing of OpenGL.
+Input specification is taken in world coordinate system. Input parameters control camera viewing
+angle, camera position, cliiping plane distance, camera frustum dimensions. Pipeline includes:
+-> Calculation of eye/camera position in viewing coordinte system
+-> Rendering near and far places based on input specifications
+-> Line clipping to clip polygons outside view frustrum
+-> Rendering of scene in world.
+-> Rendering of scene (without clipping) after transformation to VCS with view frustum computed
+-> Rendering of scene after perspective transformation.
+-> Rendering of scene after normalization.
+-> Rendering of scene after projection and clipping on the viewing plane.
+
+################################################################################################
+
 Collaborators:
-Shantanu Chaudhary (2010CS50295)
-Mukesh Kumar (2010CS50288)
-#############################################################################################################################################################
+Shantanu Chaudhary (shantanuchaudhary24@gmail.com)
+Mukesh Kumar (mukeshkumar51091@gmail.com)
+
+################################################################################################
+
 Folder hierarchy:
 Makefile	: For building, cleaning project
 README		: Information about project code
-config.cfg	: Configuration file for setting project parameters (Refer source code for info)
-src		: contains source code files
-obj		: contains object code files (Not under version tracker)
-include		: library headers for the corresponding src code files
-bin		: contains the build binary file (Not under version tracker)
+config.cfg	: Configuration file for setting project parameters (Refer source code)
+src		: source code files
+obj		: object code files (Not under version tracker)
+include		: library headers
+bin		: built binary file (Not under version tracker)
+
+################################################################################################
+
+Dependencies:
+-> C++ compiler
+-> OpenGL 3.0 or higher
+
+################################################################################################
+
+Setting up project code:
+-> Clone the repository
+-> Create two directories with name "obj" and "bin" in the repository
+
+Building the program:
+-> Use "make build"
+
+Executing the program:
+-> Use "make run"
+
+Cleaning the build:
+-> Use "make clean" to remove the build binaries and object files.
+
+Configuring Input:
+-> Refer config.cfg file
+
+################################################################################################
